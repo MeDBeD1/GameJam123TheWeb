@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://music/Web surfing is so calm.ogg" type="AudioStream" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://music/Web surf loop 3.ogg" type="AudioStream" id=12]
 [ext_resource path="res://sounds/Square 4.ogg" type="AudioStream" id=13]
 [ext_resource path="res://scripts/MusicSettingsWithoutPlayStopButtons.gd" type="Script" id=14]
+[ext_resource path="res://Sprites/WebBGForum.png" type="Texture" id=15]
 
 [node name="GameWindow" type="Node"]
 script = ExtResource( 3 )
@@ -30,6 +31,7 @@ bus = "Music"
 [node name="BulletManager" parent="." instance=ExtResource( 4 )]
 
 [node name="TileMap" parent="." instance=ExtResource( 5 )]
+modulate = Color( 0.286275, 0.701961, 0.286275, 1 )
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 7 )]
 position = Vector2( 386, 380 )
@@ -152,6 +154,56 @@ text = "Exit to menu"
 align = 1
 valign = 1
 clip_text = true
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="WebBgForum" type="Sprite" parent="Background"]
+position = Vector2( 364, 164.25 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -10
+texture = ExtResource( 15 )
+
+[node name="WebBgForum2" type="Sprite" parent="Background"]
+position = Vector2( 364, 248.25 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -10
+texture = ExtResource( 15 )
+
+[node name="WebBgForum3" type="Sprite" parent="Background"]
+position = Vector2( 363, 332.25 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -10
+texture = ExtResource( 15 )
+
+[node name="WebBgForum4" type="Sprite" parent="Background"]
+position = Vector2( 714.5, 164.5 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -10
+texture = ExtResource( 15 )
+
+[node name="WebBgForum5" type="Sprite" parent="Background"]
+position = Vector2( 714.5, 248.5 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -10
+texture = ExtResource( 15 )
+
+[node name="WebBgForum6" type="Sprite" parent="Background"]
+position = Vector2( 713.5, 332.5 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -10
+texture = ExtResource( 15 )
+
+[node name="WebBgForum7" type="Sprite" parent="Background"]
+position = Vector2( 362.5, 416.5 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -10
+texture = ExtResource( 15 )
+
+[node name="WebBgForum8" type="Sprite" parent="Background"]
+position = Vector2( 713, 416.75 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -10
+texture = ExtResource( 15 )
 
 [connection signal="value_changed" from="CanvasLayer/Pause/MusicControl/GridContainer/MusicSettings/HSlider" to="CanvasLayer/Pause/MusicControl/GridContainer/MusicSettings" method="_on_HSlider_value_changed"]
 [connection signal="value_changed" from="CanvasLayer/Pause/MusicControl/GridContainer/SFXSettings/HSlider" to="CanvasLayer/Pause/MusicControl/GridContainer/SFXSettings" method="_on_HSlider_value_changed"]
